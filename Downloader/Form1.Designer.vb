@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Downloadbutton = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
@@ -29,6 +30,8 @@ Partial Class Form1
         '
         'TextBox1
         '
+        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Location = New System.Drawing.Point(12, 12)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(258, 22)
@@ -37,15 +40,14 @@ Partial Class Form1
         '
         'Downloadbutton
         '
+        Me.Downloadbutton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Downloadbutton.Location = New System.Drawing.Point(81, 40)
         Me.Downloadbutton.Name = "Downloadbutton"
         Me.Downloadbutton.Size = New System.Drawing.Size(101, 23)
         Me.Downloadbutton.TabIndex = 1
         Me.Downloadbutton.Text = "Download"
         Me.Downloadbutton.UseVisualStyleBackColor = True
-        '
-        'SaveFileDialog1
-        '
         '
         'Form1
         '
@@ -54,8 +56,9 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(282, 253)
         Me.Controls.Add(Me.Downloadbutton)
         Me.Controls.Add(Me.TextBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Downloader"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
